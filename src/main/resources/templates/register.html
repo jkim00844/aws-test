@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+</head>
+
+<body>
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>Spring Boot Web Thymeleaf Example</h1>
+        <form class="m-t" role="form" action="/api/register" id="loginForm" method="post">
+             <div class="form-group">
+                 <input type="email" name="email" id="email" class="form-control"
+                        placeholder="Email" required="required"/>
+             </div>
+             <div class="form-group">
+                 <input type="password" name="password" id="password" class="form-control"
+                        placeholder="Password" required="required"/>
+             </div>
+             <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>
+
+

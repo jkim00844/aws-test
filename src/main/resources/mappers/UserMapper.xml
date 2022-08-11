@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.UserDao">
+    <select id="getUser" resultType="Map" parameterType="String">
+        SELECT * FROM my_rds_name.user WHERE email=#{email};
+    </select>
+
+    <select id="insertUser" resultType="Map" parameterType="Map">
+        INSERT INTO `my_rds_name`.`user` (`email`, `password`) VALUES (#{email}, #{password});
+    </select>
+</mapper>
