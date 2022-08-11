@@ -33,10 +33,11 @@ jobs:
       with:
         distribution: 'adopt'
         java-version: '11'
+        cache: maven
 
-    # (3) Gradle build (Test 제외)
+    # (3) Maven
     - name: Build with Maven
-      run: mvn -B package --file back/pom.xml
+      run: mvn compile
 
     # (4) AWS 인증 (IAM 사용자 Access Key, Secret Key 활용)
     - name: Configure AWS credentials
